@@ -1,0 +1,93 @@
+{%extends "main.html"%}
+{%load static%}
+{%block extra_css%}
+    <link rel="stylesheet" href="{%static 'user/user.css'%}"/>
+{%endblock%}
+{%block content%}
+  <div class="main-content">
+    <div class="multi-container">
+      <h3 class="multi-title">Product List</h3>
+
+      <div class="multi-toolbar">
+        <button id="multi-delete-btn" class="multi-btn-danger" disabled>Delete Selected</button>
+        <button id="multi-export-btn" class="multi-btn-primary" disabled>Export Selected</button>
+      </div>
+
+      <table class="multi-table">
+        <thead>
+          <tr>
+            <th><input type="checkbox" id="multi-select-all"></th>
+            <th>Profile</th>
+            <th>Name</th>
+            <th>last name</th>
+            <th>Phone number</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>state</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox" class="multi-row-checkbox"></td>
+            <td><a href="{%url 'detailusers'%}"><img src="{%static 'images/IQ.jpg'%}"  class="imageofitem"/></a></td>
+            <td>ALi</td>
+            <td>Sultan</td>
+            <td>28394720908</td>
+            <td>Kabul Afghaistan</td>
+            <td>alil@gmail.com</td>
+            <td>
+              <span class="state active">Active</span>
+              <span class="state pending">Pending</span>
+              <span class="state disable">Disable</span>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="multi-row-checkbox"></td>
+            <td><a href="{%url 'detailusers'%}"><img src="{%static 'images/IQ.jpg'%}"  class="imageofitem"/></a></td>
+            <td>ALi</td>
+            <td>Sultan</td>
+            <td>28394720908</td>
+            <td>Kabul Afghaistan</td>
+            <td>alil@gmail.com</td>
+            <td>
+              <span class="state active">Active</span>
+              <span class="state pending">Pending</span>
+              <span class="state disable">Disable</span>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="multi-row-checkbox"></td>
+            <td><a href="{%url 'detailusers'%}"><img src="{%static 'images/IQ.jpg'%}"  class="imageofitem"/></a></td>
+            <td>ALi</td>
+            <td>Sultan</td>
+            <td>28394720908</td>
+            <td>Kabul Afghaistan</td>
+            <td>alil@gmail.com</td>
+            <td>
+              <span class="state active">Active</span>
+              <span class="state pending">Pending</span>
+              <span class="state disable">Disable</span>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="multi-row-checkbox"></td>
+            <td><a href="{%url 'detailusers'%}"><img src="{%static 'images/IQ.jpg'%}"  class="imageofitem"/></a></td>
+            <td>ALi</td>
+            <td>Sultan</td>
+            <td>28394720908</td>
+            <td>Kabul Afghaistan</td>
+            <td>alil@gmail.com</td>
+            <td>
+              <span class="state active">Active</span>
+              <span class="state pending">Pending</span>
+              <span class="state disable">Disable</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    {%block js_ref%}
+      <script src="js/javascript.js"></script>
+    {%endblock%}
+  </div>
+{%endblock%}

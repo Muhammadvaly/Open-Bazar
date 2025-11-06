@@ -1,0 +1,108 @@
+{% extends "main.html" %}
+{%load static%}
+{%block extra_css%}
+    <link rel="stylesheet" href="{%static 'style.css'%}"/>
+{%endblock%}
+{%block content%}
+  <div class="main-content">
+    <div class="content-header">
+      <h1>Dashboard Overview</h1>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="stats-cards">
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <h3>Total Products</h3>
+          <div class="stat-icon icon-products">🛍️
+          </div>
+        </div>
+        <div class="number">1,247</div>
+        <div class="trend">↑ 12% from last month</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <h3>Active Customers</h3>
+          <div class="stat-icon icon-users">👥</div>
+        </div>
+        <div class="number">892</div>
+        <div class="trend">↑ 8% from last month</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <h3>Pending Orders</h3>
+          <div class="stat-icon icon-orders">💰</div>
+        </div>
+        <div class="number">56</div>
+        <div class="trend down">↓ 3% from last week</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <h3>Total Revenue</h3>
+          <div class="stat-icon icon-revenue">💵</div>
+        </div>
+        <div class="number">$12,847</div>
+        <div class="trend">↑ 15% from last month</div>
+      </div>
+    </div>
+
+    <!-- Charts Section -->
+    <div class="charts-section">
+      <div class="chart-card">
+        <div class="chart-header">
+          <h3>Sales Overview</h3>
+          <select style="padding: 8px 12px; border: 1px solid #e0e0e0; border-radius: 6px">
+            <option>Last 7 days</option>
+            <option>Last 30 days</option>
+            <option>Last 90 days</option>
+          </select>
+        </div>
+        <div class="chart-placeholder">Sales Chart Area - Integrate with Chart.js or similar</div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-header">
+          <h3>Top Categories</h3>
+        </div>
+        <div class="chart-placeholder">Pie Chart Area - Category Distribution</div>
+      </div>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="recent-activity">
+      <div class="activity-header">
+        <h3>Recent Activity</h3>
+      </div>
+      <div class="activity-list">
+        <div class="activity-item">
+          <div class="activity-icon" style="background: #e3f2fd; color: #1976d2">🛒</div>
+          <div class="activity-content">
+            <p>New order #ORD-7842 placed</p>
+            <div class="activity-time">2 minutes ago</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon" style="background: #f3e5f5; color: #7b1fa2">👤</div>
+          <div class="activity-content">
+            <p>New customer registration</p>
+            <div class="activity-time">15 minutes ago</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon" style="background: #e8f5e8; color: #388e3c">✅</div>
+          <div class="activity-content">
+            <p>Order #ORD-7841 marked as completed</p>
+            <div class="activity-time">1 hour ago</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon" style="background: #fff3e0; color: #f57c00">📦</div>
+          <div class="activity-content">
+            <p>Product "Vintage Camera" added to store</p>
+            <div class="activity-time">2 hours ago</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{%endblock%}
+

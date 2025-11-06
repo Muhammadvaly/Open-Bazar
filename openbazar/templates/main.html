@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecondHand Store Admin</title>
+  <link rel="stylesheet" href="{% static 'all.css' %}" />
+  {% comment %} <link rel="stylesheet" href="{% static 'static/all.min.css' %}" /> {% endcomment %}
+  <link rel="stylesheet" href="{% static 'style.css' %}" />
+  {%block extra_css%}{%endblock%}
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    {% include 'sidebar.html' %}
+    <div class="content">
+      <!-- Header -->
+      {% include 'header.html' %}
+      <div class="contentofmainpage">
+          <!-- Main Content -->
+          {% comment %} {% include 'main_content.html' %} {% endcomment %}
+          <div class="mainpage"> 
+            {%block content%}
+
+            {%endblock%}
+          </div>
+        </div>
+    </div>
+  <div>
+  <script src="script.js"></script>
+  {%block js_ref%}{%endblock%}
+</body>
+</html>

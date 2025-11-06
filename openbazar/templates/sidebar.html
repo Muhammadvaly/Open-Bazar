@@ -1,0 +1,36 @@
+<div class="sidebar">
+  <div class="sidebar-header">
+    <h2>🔄 <span>SecondHand</span></h2>
+  </div>
+  <div class="sidebar-menu">
+    <a href="{% url 'dashboard'%}" style="text-decoration:none;color:gray;">
+      <div class="menu-item active" data-page="dashboard">
+          <span>Dashboard</span>
+      </div>
+    </a>
+    <a href="{% url 'product'%}"  style="text-decoration:none;color:gray;">
+      <div class="menu-item" data-page="products">
+        <i>🛍️</i>
+        <span>Products</span>
+      </div>
+    </a>
+    <a href="{% url 'users'%}"  style="text-decoration:none;color:gray;">
+      <div class="menu-item" data-page="customers">
+        <i>👥</i>
+        <span>Customers</span>
+      </div>
+    </a>
+    <div class="menu-item" data-page="orders">
+      <i>💰</i>
+      <span>Request Orders</span>
+    </div>
+    <div class="menu-item" data-page="analytics">
+      <i>📈</i>
+      <span>Analytics</span>
+    </div>
+    <div class="menu-item" data-page="settings">
+      <i>⚙️</i>
+      <span>Settings</span>
+    </div>
+  </div>
+</div>

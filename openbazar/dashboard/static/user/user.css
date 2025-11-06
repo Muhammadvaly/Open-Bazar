@@ -1,0 +1,103 @@
+/* Buttons */
+.multi-btn-danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  /* font-size: 12px; */
+}
+
+/* .multi-btn-danger:disabled {
+  background-color: #f5b7b7;
+  cursor: not-allowed;
+} */
+
+.multi-btn-primary {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  /* font-size: 10px; */
+}
+
+/* .multi-btn-primary:disabled {
+  background-color: #aac7f5;
+  cursor: not-allowed;
+} */
+
+/* Table */
+.multi-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  /* border-radius: 8px; */
+  overflow: hidden;
+  margin:50px auto;
+
+}
+
+.multi-table th,
+.multi-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+  color: #333;
+  font-size: 13px;
+    text-align: center;
+
+}
+
+.multi-table thead {
+  background-color: #f4f4f4;
+  font-weight: 200;
+}
+
+.multi-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.multi-table input[type="checkbox"] {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.multi-toolbar{
+    margin-top:20px;
+    display:flex;
+    gap:2rem;
+}
+.imageofitem{
+    width: 50px;
+    height:50px;
+    border-radius: 50px;
+}
+.state{
+    background-color: red;
+    padding:4px;
+    border:none;
+    color:white;
+    border-radius: 10px;
+    margin-right:5px;
+}
+.state:hover{
+    cursor: pointer;
+}
+
+.pending{
+    background-color: rgb(81, 159, 228);
+}
+.active{
+    background-color: rgb(124, 253, 124);
+}
+.disable{
+    background-color: #f8727f;
+}
+.itemphoto{
+    width:200px;
+    height:200px;
+    border-radius:20px;
+}
