@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بازار آنلاین - خرید و فروش آسان</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <i class="fas fa-store"></i>
+                    <span>بازار آنلاین</span>
+                </div>
+
+                <div class="search-bar">
+                    <input type="text" placeholder="جستجو در بین هزاران آگهی..." id="searchInput">
+                    <button id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <div class="header-actions">
+                    <button class="btn-primary" id="addListingBtn">
+                        <i class="fas fa-plus"></i>
+                        ثبت آگهی
+                    </button>
+                    <div class="user-menu">
+                        <button class="user-btn">
+                            <i class="fas fa-user"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="#" class="active">همه آگهی‌ها</a></li>
+                    <li><a href="#">املاک</a></li>
+                    <li><a href="#">وسایل نقلیه</a></li>
+                    <li><a href="#">کالای دیجیتال</a></li>
+                    <li><a href="#">خانه و آشپزخانه</a></li>
+                    <li><a href="#">خدمات</a></li>
+                    <li><a href="#">استخدام</a></li>
+                    <li><a href="#">حیوانات</a></li>
+                    <li><a href="#">تفریح و فراغت</a></li>
+                    <li><a href="#">اجتماعی</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>بزرگترین بازار آنلاین خرید و فروش</h1>
+                <p>کالا و خدمات مورد نیاز خود را با بهترین قیمت پیدا کنید</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">۵۰,۰۰۰+</span>
+                        <span class="stat-label">آگهی فعال</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">۱,۰۰۰,۰۰۰+</span>
+                        <span class="stat-label">بازدید ماهانه</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">۹۵%</span>
+                        <span class="stat-label">رضایت کاربران</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Sidebar Filters -->
+                <aside class="sidebar">
+                    <div class="filter-section">
+                        <h3>فیلترها</h3>
+
+                        <div class="filter-group">
+                            <h4>دسته‌بندی</h4>
+                            <select id="categoryFilter" class="filter-select">
+                                <option value="">همه دسته‌بندی‌ها</option>
+                                <option value="property">املاک</option>
+                                <option value="vehicle">وسایل نقلیه</option>
+                                <option value="electronic">کالای دیجیتال</option>
+                                <option value="home">خانه و آشپزخانه</option>
+                                <option value="service">خدمات</option>
+                                <option value="job">استخدام</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>شهر</h4>
+                            <select id="cityFilter" class="filter-select">
+                                <option value="">همه شهرها</option>
+                                <option value="tehran">تهران</option>
+                                <option value="mashhad">مشهد</option>
+                                <option value="isfahan">اصفهان</option>
+                                <option value="shiraz">شیراز</option>
+                                <option value="tabriz">تبریز</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>محدوده قیمت</h4>
+                            <div class="price-range">
+                                <input type="number" placeholder="حداقل قیمت" class="price-input" id="minPrice">
+                                <input type="number" placeholder="حداکثر قیمت" class="price-input" id="maxPrice">
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>وضعیت آگهی</h4>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" class="filter-checkbox" value="urgent">
+                                    <span class="checkmark"></span>
+                                    فوری
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" class="filter-checkbox" value="negotiable">
+                                    <span class="checkmark"></span>
+                                    قیمت توافقی
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" class="filter-checkbox" value="exchange">
+                                    <span class="checkmark"></span>
+                                    قابل معاوضه
+                                </label>
+                            </div>
+                        </div>
+
+                        <button class="filter-apply-btn" id="applyFilters">
+                            اعمال فیلترها
+                        </button>
+                        <button class="filter-reset-btn" id="resetFilters">
+                            حذف فیلترها
+                        </button>
+                    </div>
+
+                    <!-- Quick Categories -->
+                    <div class="quick-categories">
+                        <h3>دسته‌بندی‌های پرطرفدار</h3>
+                        <div class="category-list">
+                            <a href="#" class="category-item">
+                                <i class="fas fa-home"></i>
+                                <span>اجاره مسکونی</span>
+                            </a>
+                            <a href="#" class="category-item">
+                                <i class="fas fa-car"></i>
+                                <span>خودرو</span>
+                            </a>
+                            <a href="#" class="category-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>موبایل</span>
+                            </a>
+                            <a href="#" class="category-item">
+                                <i class="fas fa-laptop"></i>
+                                <span>لپ‌تاپ</span>
+                            </a>
+                            <a href="#" class="category-item">
+                                <i class="fas fa-couch"></i>
+                                <span>لوازم خانگی</span>
+                            </a>
+                            <a href="#" class="category-item">
+                                <i class="fas fa-briefcase"></i>
+                                <span>استخدام</span>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Listings Section -->
+                <section class="listings-section">
+                    <div class="listings-header">
+                        <h2>آگهی‌های最近</h2>
+                        <div class="sort-options">
+                            <select id="sortSelect" class="sort-select">
+                                <option value="newest">جدیدترین</option>
+                                <option value="cheapest">ارزان‌ترین</option>
+                                <option value="expensive">گران‌ترین</option>
+                                <option value="popular">محبوب‌ترین</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Featured Listings -->
+                    <div class="featured-listings">
+                        <h3>آگهی‌های ویژه</h3>
+                        <div class="listings-grid" id="featuredGrid">
+                            <!-- Featured listings will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- All Listings -->
+                    <div class="all-listings">
+                        <h3>همه آگهی‌ها</h3>
+                        <div class="listings-grid" id="listingsGrid">
+                            <!-- All listings will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button class="pagination-btn" id="prevPage" disabled>
+                            <i class="fas fa-chevron-right"></i>
+                            قبلی
+                        </button>
+                        <div class="page-numbers" id="pageNumbers">
+                            <!-- Page numbers will be generated here -->
+                        </div>
+                        <button class="pagination-btn" id="nextPage">
+                            بعدی
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Add Listing Modal -->
+    <div id="addListingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>ثبت آگهی جدید</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="listingForm" class="listing-form">
+                    <div class="form-group">
+                        <label for="listingTitle">عنوان آگهی *</label>
+                        <input type="text" id="listingTitle" required placeholder="عنوان آگهی را وارد کنید">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="listingCategory">دسته‌بندی *</label>
+                            <select id="listingCategory" required>
+                                <option value="">انتخاب کنید</option>
+                                <option value="property">املاک</option>
+                                <option value="vehicle">وسایل نقلیه</option>
+                                <option value="electronic">کالای دیجیتال</option>
+                                <option value="home">خانه و آشپزخانه</option>
+                                <option value="service">خدمات</option>
+                                <option value="job">استخدام</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="listingPrice">قیمت (تومان) *</label>
+                            <input type="number" id="listingPrice" required placeholder="قیمت را وارد کنید">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="listingDescription">توضیحات</label>
+                        <textarea id="listingDescription" rows="4" placeholder="توضیحات کامل آگهی"></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="listingCity">شهر *</label>
+                            <select id="listingCity" required>
+                                <option value="">انتخاب کنید</option>
+                                <option value="tehran">تهران</option>
+                                <option value="mashhad">مشهد</option>
+                                <option value="isfahan">اصفهان</option>
+                                <option value="shiraz">شیراز</option>
+                                <option value="tabriz">تبریز</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="listingPhone">شماره تماس *</label>
+                            <input type="tel" id="listingPhone" required placeholder="09xxxxxxxxx">
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">ثبت آگهی</button>
+                        <button type="button" class="btn-secondary" id="cancelListing">انصراف</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Listing Detail Modal -->
+    <div id="listingDetailModal" class="modal">
+        <div class="modal-content large">
+            <span class="close-modal">&times;</span>
+            <div id="listingDetailContent">
+                <!-- Listing details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>درباره بازار آنلاین</h3>
+                    <p>بازار آنلاین بزرگترین پلتفرم خرید و فروش در ایران با بیش از ۱۰ سال سابقه در زمینه ارائه خدمات آنلاین</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>لینک‌های مفید</h3>
+                    <ul>
+                        <li><a href="#">قوانین و مقررات</a></li>
+                        <li><a href="#">درباره ما</a></li>
+                        <li><a href="#">تماس با ما</a></li>
+                        <li><a href="#">پرسش‌های متداول</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>دانلود اپلیکیشن</h3>
+                    <div class="download-apps">
+                        <button class="app-download-btn">
+                            <i class="fab fa-google-play"></i>
+                            Google Play
+                        </button>
+                        <button class="app-download-btn">
+                            <i class="fab fa-apple"></i>
+                            App Store
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© ۲۰۲۴ بازار آنلاین. تمام حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
